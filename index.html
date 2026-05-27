@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e2Black - Custom Encoder & Decoder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>e2Black</h1>
+            <p>Commercial-grade text encryption & decryption tool</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="card secret-key-card">
+            <h2>Kunci Rahasia <span class="card-desc">/ Secret Key (XOR)</span></h2>
+            <div class="form-group" style="margin-bottom: 0;">
+                <input type="text" id="secret-key" placeholder="Masukkan kunci rahasia Jawa-mu di sini (contoh: jowo)..." autocomplete="off">
+            </div>
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Encoder <span class="card-desc">/ Konversi Teks ke Simbol</span></h2>
+                <div class="form-group">
+                    <label for="encode-input">Plain Text</label>
+                    <textarea id="encode-input" placeholder="Masukkan teks biasa di sini (contoh: kucing)..."></textarea>
+                </div>
+                <button id="btn-encode" class="btn btn-primary">Encode Text</button>
+                
+                <div class="form-group result-group">
+                    <label for="encode-output">Encoded Output</label>
+                    <textarea id="encode-output" readonly placeholder="Hasil simbol, huruf, dan angka akan muncul di sini..."></textarea>
+                    <div class="btn-action-group">
+                        <button id="btn-copy-encode" class="btn-action">Copy Output</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Decoder <span class="card-desc">/ Kembalikan ke Teks Asli</span></h2>
+                <div class="form-group">
+                    <label for="decode-input">Encoded Text</label>
+                    <textarea id="decode-input" placeholder="Masukkan simbol hasil e2Black di sini..."></textarea>
+                    <div class="btn-action-group">
+                        <button id="btn-paste-decode" class="btn-action">Paste Text</button>
+                    </div>
+                </div>
+                <button id="btn-decode" class="btn btn-secondary">Decode Text</button>
+                
+                <div class="form-group result-group">
+                    <label for="decode-output">Decoded Output</label>
+                    <textarea id="decode-output" readonly placeholder="Teks asli akan muncul di sini..."></textarea>
+                    <div class="btn-action-group">
+                        <button id="btn-copy-decode" class="btn-action">Copy Output</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 e2Black. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
